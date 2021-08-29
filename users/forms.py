@@ -24,7 +24,7 @@ class UserRegistrationForm(UserCreationForm):
         'class': 'from-controll py-4', 'placeholder': "Enter your last name"}))
     password1 = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'from-controll py-4', 'placeholder': "Enter your password"}))
-    password1 = forms.CharField(widget=forms.TextInput(attrs={
+    password2 = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'from-controll py-4', 'placeholder': "Confirm your password"}))
 
 
