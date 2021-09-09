@@ -35,3 +35,8 @@ class UserDeleteView(DeleteView):
     model = User
     tamplate_name = 'admins/users-update-delete.html'
     success_url = reverse_lazy('admins:admin_users')
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.safe_delete()
+        return HttpResponseRedirect(self.get_success_url())
