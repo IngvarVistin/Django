@@ -50,7 +50,10 @@
                 </form>
                 <div class="row">
                     <div class="col-lg-12" style="margin-top: 33px;">
-                        <a class="btn btn-danger btn-block" href="{% url 'admins:admin_users_delete' object.id %}">Delete</a>
+                        <from action="{% url 'admins:admin_users_delete' object.id %}" method="post">
+                            {% csrf_tocken %}
+                            <input class="btn btn-danger btn-block" type="submit" value="Delete">
+                        </from>
                     </div>
                 </div>
             </div>
